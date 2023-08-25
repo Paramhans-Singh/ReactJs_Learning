@@ -1,1 +1,1 @@
-<h1>ReactJs ==>Resources </h1>
+<h1>Resources of ReactJs</h1>

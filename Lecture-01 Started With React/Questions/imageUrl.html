@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React App</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+
+      // Write your React code here
+
+function App() {
+        // Define the image URL
+        const imageUrl = 'https://files.codingnianjas.in/coding-ninjas-24647.png';
+
+        // Create an image element
+        const imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+        imageElement.alt = 'My Image';
+
+        // Create a div to contain the image
+        const containerDiv = document.createElement('div');
+        containerDiv.appendChild(imageElement);
+
+        // Return the container div as the component's content
+        return containerDiv;
+      }
+
+      // Get the root element from the HTML
+      const rootElement = document.getElementById('root');
+
+      // Render the App component to the root element
+      rootElement.appendChild(App());
+
+    </script>
+
+  </body>
+</html>

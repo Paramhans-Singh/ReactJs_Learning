@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>React App</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Create handlers to increase and decrease vehicle count here
+      const carCountRef = React.createRef();
+      const bikeCountRef = React.createRef();
+      const scootyCountRef = React.createRef();
+      const bicycleCountRef = React.createRef();
+
+      const increaseCount = (ref) => {
+        const count = parseInt(ref.current.textContent, 10);
+        // 10 means base as decimal number 
+        ref.current.textContent = count + 1;
+      };
+
+      const decreaseCount = (ref) => {
+        const count = parseInt(ref.current.textContent, 10);
+        if (count > 0) {
+          ref.current.textContent = count - 1;
+        }
+      };
+
+      const App = () => (
+        <>
+          <p>List of all the vehicles count in the parking.</p>
+          <ol>
+            <li>
+              <p>
+                <b>Car: </b> &emsp;
+                <span ref={carCountRef}>0</span>&emsp;
+                <button onClick={() => increaseCount(carCountRef)}>Increase</button>&emsp;
+                <button onClick={() => decreaseCount(carCountRef)}>Decrease</button>
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Bike: </b> &emsp;
+                <span ref={bikeCountRef}>0</span>&emsp;
+                <button onClick={() => increaseCount(bikeCountRef)}>Increase</button>&emsp;
+                <button onClick={() => decreaseCount(bikeCountRef)}>Decrease</button>
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Scooty: </b> &emsp;
+                <span ref={scootyCountRef}>0</span>&emsp;
+                <button onClick={() => increaseCount(scootyCountRef)}>Increase</button>&emsp;
+                <button onClick={() => decreaseCount(scootyCountRef)}>Decrease</button>
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Bicycle:</b> &emsp;
+                <span ref={bicycleCountRef}>0</span>&emsp;
+                <button onClick={() => increaseCount(bicycleCountRef)}>Increase</button>&emsp;
+                <button onClick={() => decreaseCount(bicycleCountRef)}>Decrease</button>
+              </p>
+            </li>
+          </ol>
+        </>
+      );
+
+      const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+      rootElement.render(<App />);
+    </script>
+  </body>
+</html>

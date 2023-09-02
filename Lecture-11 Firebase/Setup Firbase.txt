@@ -1,0 +1,18 @@
+- go to firebase.google.com
+- go to console
+- enter the project name and disable the analytics
+- select to web and then enter app name 
+and then direct register 
+- it will give sdk as software development kit 
+- and all steps to add firestore
+- if u forgot to add kit to ur project 
+then go to project overview and 
+then project settings and then sdk kit 
+- then go to build and then firestore dtabase
+- then click on create database then select 
+- test mode and then select location 
+- then u can add collections after also at that 
+time too by clicking start collection 
+- name the collection then do auto id and then 
+name the document and then fields ..
+  
